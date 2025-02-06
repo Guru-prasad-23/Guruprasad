@@ -59,7 +59,7 @@ export const PROJECTS = [
     subtitle:
       "Developed the front-end portfolio website, highlighting skills, projects, and experiences.",
     image: image3,
-    url: "https://portfoliowebsite-mu-gilt.vercel.app/",
+    url: "https://guruprasad-phi.vercel.app/",
     description:
       "I have built a dynamic portfolio website using React, Tailwind CSS, and Framer Motion, with React Router handling seamless navigation. The site features smooth animations and a clean, responsive design to highlight your skills and projects. It serves as a professional showcase, reflecting my expertise and passion for web development.",
   },
