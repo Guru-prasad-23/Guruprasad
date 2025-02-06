@@ -68,7 +68,7 @@ const ProjectDetails = () => {
         Visit Project
       </motion.button>
       <motion.p
-      className="text-gray-500 mt-12 "
+      className={project.url ? "hidden":"text-gray-500 mt-12 "}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1, transition: { duration: 0.4 } }}
       >
