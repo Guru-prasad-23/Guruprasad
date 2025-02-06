@@ -1,4 +1,4 @@
-// import logo from '../assets/logo.png'
+
 import { SOCIAL_MEDIA_LINKS } from "../constants/index";
 const Footer = () => {
   return (

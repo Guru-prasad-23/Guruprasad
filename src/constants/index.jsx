@@ -1,9 +1,4 @@
-import {
-  FaXTwitter,
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-} from "react-icons/fa6";
+import { FaXTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
 
 import { RiReactjsLine } from "react-icons/ri";
 import { SiTailwindcss } from "react-icons/si";
@@ -13,16 +8,10 @@ import { SiMongodb } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { SiSocketdotio } from "react-icons/si";
 
-
 import image1 from "../assets/project1.jpeg";
 import image2 from "../assets/project2.jpeg";
 import image3 from "../assets/project3.jpeg";
 import image4 from "../assets/project4.jpeg";
-
-import user1 from "../assets/profile-pictures/user1.jpg";
-import user2 from "../assets/profile-pictures/user2.jpg";
-import user3 from "../assets/profile-pictures/user3.jpg";
-import user4 from "../assets/profile-pictures/user4.jpg";
 
 export const NAVIGATION_LINKS = [
   { label: "About", href: "#about" },
@@ -46,27 +35,41 @@ export const ABOUT = {
 
 export const PROJECTS = [
   {
-    title: "MedEase",
+    id: 1,
+    title: "R Events",
     subtitle:
-      "Built a full-stack healthcare platform providing online doctor consultations, AI health chat, centralized records, personalized tips, and appointment booking for efficient health management.",
+      "I built a static website for an event management company using React, Tailwind CSS, and Framer Motion to showcase their services and gallery. The site features a visually appealing design with smooth animations for an engaging user experience.",
     image: image1,
+    description:
+      "I developed a visually captivating static website for an event management company using React, Tailwind CSS, and Framer Motion. The site effectively highlights their services and gallery with a clean, modern layout and smooth animations, enhancing user engagement. Leveraging Tailwind CSS, I ensured a responsive and aesthetically pleasing design, while Framer Motion added dynamic transitions for an interactive experience. The website provides potential clients with an immersive overview of the company’s offerings, making it both functional and visually compelling.",
+    url: "https://r-events-guru-prasads-projects-c14c6795.vercel.app/",
   },
   {
+    id: 2,
     title: "Authentication and Authorization",
     subtitle:
       "Developed a secure MERN stack app with Firebase authentication, JWT, and Redux Toolkit integration.",
     image: image2,
+    url: "",
+    description: "I developed a secure full-stack web application using the MERN stack, implementing JWT authentication for robust user security. Redux Toolkit was integrated to efficiently manage global state, ensuring smooth and scalable application performance. The backend, built with Node.js and Express, securely handles authentication and API requests, while MongoDB serves as a reliable database for user and application data. The frontend, powered by React and Tailwind CSS, offers a responsive and user-friendly interface with seamless state management through Redux. This application prioritizes security, scalability, and performance, making it a well-structured and efficient solution.",
   },
   {
+    id: 3,
     title: "Personal Portfolio website",
-    subtitle: "Developed the front-end portfolio website, highlighting skills, projects, and experiences.",
+    subtitle:
+      "Developed the front-end portfolio website, highlighting skills, projects, and experiences.",
     image: image3,
+    url: "https://portfoliowebsite-mu-gilt.vercel.app/",
+    description:
+      "I have built a dynamic portfolio website using React, Tailwind CSS, and Framer Motion, with React Router handling seamless navigation. The site features smooth animations and a clean, responsive design to highlight your skills and projects. It serves as a professional showcase, reflecting my expertise and passion for web development.",
   },
   {
+    id: 4,
     title: "Responsive SaaS Landing Page",
-    subtitle:
-      "Designed and developed a responsive landing page.”",
+    subtitle: "Designed and developed a responsive landing page.”",
     image: image4,
+    url: "https://responsive-saas-website.vercel.app/",
+    description: "I designed and developed a fully responsive landing page using React, Tailwind CSS, and Framer Motion. The page features a modern and clean layout with smooth animations to enhance user engagement. Tailwind CSS ensures a flexible and optimized design, making the page adapt seamlessly to all screen sizes. Framer Motion adds dynamic transitions, creating an interactive and visually appealing experience. The landing page is structured for clarity and performance, providing users with an intuitive and engaging interface.",
   },
 ];
 
@@ -74,70 +77,32 @@ export const SKILLS = [
   {
     icon: <RiReactjsLine className="text-4xl lg:text-6xl text-cyan-400" />,
     name: "React",
-    // experience: "2+ years",
   },
   {
-    icon: <SiExpress  className="text-4xl lg:text-6xl text-white" />,
+    icon: <SiExpress className="text-4xl lg:text-6xl text-white" />,
     name: "Express.js",
-    // experience: "1+ year",
   },
   {
     icon: <SiMongodb className="text-4xl lg:text-6xl text-green-600" />,
     name: "MongoDB",
-    // experience: "1.5+ years",
   },
   {
     icon: <FaNodeJs className="text-4xl lg:text-6xl text-green-600" />,
     name: "Node.js",
-    // experience: "2+ years",
   },
   {
-    icon: <TbBrandFramerMotion className="text-4xl lg:text-6xl text-green-600" />,
+    icon: (
+      <TbBrandFramerMotion className="text-4xl lg:text-6xl text-green-600" />
+    ),
     name: "Framer Motion",
-    // experience: "2+ years",
-  },
-  {
-    icon: <SiSocketdotio className="text-4xl lg:text-6xl text-green-600" />,
-    name: "Socket.io",
-    // experience: "2+ years",
   },
   {
     icon: <SiTailwindcss className="text-4xl lg:text-6xl text-green-600" />,
     name: "TailwindCSS",
-    // experience: "2+ years",
   },
 ];
 
-export const BLOGS = [
-  {
-    name: "Emily Johnson",
-    title: "CEO, Tech Innovators",
-    quote:
-      "Working with Robert has been an incredible experience. His design sensibilities and technical expertise are top-notch, making him a valuable asset to any project.",
-    image: user1,
-  },
-  {
-    name: "Michael Lee",
-    title: "CTO, Creative Minds",
-    quote:
-      "Robert consistently delivers high-quality work, combining creativity and technical prowess. His ability to solve complex problems with elegant solutions is truly impressive.",
-    image: user2,
-  },
-  {
-    name: "Sophia Martinez",
-    title: "Lead Developer, Digital Solutions",
-    quote:
-      "Robert's dedication to his craft is evident in every project he undertakes. His innovative approach and attention to detail set him apart as a leading designer and developer.",
-    image: user3,
-  },
-  {
-    name: "Daniel Thompson",
-    title: "Project Manager, InnovateX",
-    quote:
-      "Robert's ability to understand client needs and translate them into beautiful, functional designs is remarkable. He is a true professional who always exceeds expectations.",
-    image: user4,
-  },
-];
+export const BLOGS = [];
 
 export const SOCIAL_MEDIA_LINKS = [
   {
