@@ -11,6 +11,9 @@ const Navbar = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
   return (
     <div>
       <nav className="fixed left-0 right-0 top-4 z-50 ">
@@ -90,6 +93,7 @@ const Navbar = () => {
                  ) : (
                    <Link
                      to={item.to}
+                     onClick={closeMobileMenu}
                      className="block w-full text-xl"
                    >
                      {item.label}

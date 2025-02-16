@@ -70,7 +70,7 @@ const Blogs = () => {
       <h2 className="text-center text-4xl font-semibold mb-8">Blogs</h2>
 
       {/* Render Blogs */}
-      <div className="p-6 mb-6 border-b border-gray-300 grid grid-cols-4 gap-6 mx-auto w-full">
+      <div className="p-6 mb-6 border-b border-gray-300 grid lg:grid-cols-4 grid-cols-1 gap-6 mx-auto w-full">
         {blogs.slice(0, 120).map((blog, index) => (
           <motion.div
             key={index}

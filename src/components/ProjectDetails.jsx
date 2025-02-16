@@ -24,7 +24,7 @@ const ProjectDetails = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="h-screen container mx-auto mt-16 p-6 flex flex-col items-center"
+      className="h-max container mx-auto mt-16 p-6 flex flex-col items-center"
     >
       <div className="relative w-full max-w-4xl">
         <img
@@ -40,14 +40,14 @@ const ProjectDetails = () => {
       </div>
 
       <motion.p
-        className="mt-6 max-w-4xl text-2xl text-gray-300 text-justify dark:text-gray-300 px-4"
+        className="mt-6 max-w-4xl text-2xl text-gray-300 text-start lg:text-center md:text-center dark:text-gray-300 px-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
       >
         {project.subtitle}
       </motion.p>
       <motion.p
-        className="mt-6 max-w-4xl text-lg text-neutral-400 dark:text-gray-500 text-justify w-full px-4"
+        className="mt-6 max-w-4xl text-lg text-neutral-400 dark:text-gray-500 text-start lg:text-center md:text-center w-full px-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
       >
@@ -56,11 +56,11 @@ const ProjectDetails = () => {
       <h1 className="mt-16 font-sans text-neutral-400">
         Technologies Used in this Project
       </h1>
-      <div className="max-w-4xl mt-4  flex gap-6 items-center justify-center">
+      <div className="max-w-4xl mt-4  flex gap-6 items-center justify-center flex-wrap">
         {project.tech_stack.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col-reverse gap-2 items-center justify-center"
+            className="flex flex-col-reverse gap-2 items-center justify-center "
           >
             <p>{skill.title}</p>
             <p>{skill.icon}</p>
