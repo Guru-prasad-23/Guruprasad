@@ -13,7 +13,6 @@ const containerVariants = {
 
 const ProjectDetails = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const project = PROJECTS.find((proj) => proj.id.toString() === id);
 
   if (!project) {
@@ -25,7 +24,7 @@ const ProjectDetails = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="h-screen container mx-auto p-6 flex flex-col items-center"
+      className="h-screen container mx-auto mt-16 p-6 flex flex-col items-center"
     >
       <div className="relative w-full max-w-4xl">
         <img
@@ -41,25 +40,39 @@ const ProjectDetails = () => {
       </div>
 
       <motion.p
-        className="mt-6 max-w-3xl text-2xl text-gray-700 dark:text-gray-300 text-center px-4"
+        className="mt-6 max-w-4xl text-2xl text-gray-300 text-justify dark:text-gray-300 px-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
       >
         {project.subtitle}
       </motion.p>
       <motion.p
-        className="mt-6 max-w-3xl text-lg text-gray-700 dark:text-gray-500 text-center px-4"
+        className="mt-6 max-w-4xl text-lg text-neutral-400 dark:text-gray-500 text-justify w-full px-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
       >
         {project.description}
       </motion.p>
+      <h1 className="mt-16 font-sans text-neutral-400">
+        Technologies Used in this Project
+      </h1>
+      <div className="max-w-4xl mt-4  flex gap-6 items-center justify-center">
+        {project.tech_stack.map((skill, index) => (
+          <div
+            key={index}
+            className="flex flex-col-reverse gap-2 items-center justify-center"
+          >
+            <p>{skill.title}</p>
+            <p>{skill.icon}</p>
+          </div>
+        ))}
+      </div>
 
       <motion.button
         onClick={() => window.open(project.url, "_blank")}
         className={
           project.url !== ""
-            ? "mt-6 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
+            ? "mt-16 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
             : "hidden"
         }
         initial={{ opacity: 0, scale: 0.8 }}
@@ -68,7 +81,7 @@ const ProjectDetails = () => {
         Visit Project
       </motion.button>
       <motion.p
-      className={project.url ? "hidden":"text-gray-500 mt-12 "}
+        className={project.url ? "hidden" : "text-gray-500 mt-12 "}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1, transition: { duration: 0.4 } }}
       >

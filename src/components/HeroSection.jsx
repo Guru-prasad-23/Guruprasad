@@ -26,11 +26,11 @@ const HeroSection = () => {
         initial={{opacity:0, y:50}}
         animate={{opacity:1, y:0}}
         transition={{duration:1, delay:1}}
-        className="z-20 mx-4 max-w-3xl pb-20">
-          <h1 className="text-5xl font-bold uppercase tracking-wider md:text-8xl">
+        className="z-20 mx-4 max-w-3xl pb-20 ">
+          <h1 className="bg-gradient-to-tr from-pink-500 via-red-800 to-pink-500  text-transparent bg-clip-text text-4xl text-center font-extrabold uppercase tracking-wider md:text-8xl">
             {PROFILE.name}
           </h1>
-          <p className="pt-2 font-semibold">{PROFILE.info}</p>
+          <p className="pt-2 font-extralight text-center text-neutral-400">{PROFILE.info}</p>
         </motion.div>
       </div>
     </>

@@ -5,7 +5,7 @@ const Card = ({ image, title, subtitle, url, id }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="m-4 block max-w-sm overflow-hidden rounded-lg" onClick={() => navigate(`/project/${id}`)}>
+    <div className="m-4 block max-w-sm overflow-hidden rounded-lg max-h-sm" onClick={() => navigate(`/project/${id}`)}>
       <div className="relative">
         <a>
           <img src={image} alt={title} className="w-full cursor-pointer" />
