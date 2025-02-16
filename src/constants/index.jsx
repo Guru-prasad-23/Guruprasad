@@ -150,7 +150,7 @@ export const PROJECTS = [
     image: ChatpApp,
     description:
       "I built a real-time chat application that enables users to send messages instantly, see online statuses, and engage in smooth one-on-one conversations. The app ensures a responsive and user-friendly experience with a modern UI. It features authentication, real-time updates, and user presence indicators, providing a reliable communication platform.",
-    url: "https://r-events-guru-prasads-projects-c14c6795.vercel.app/",
+    url: "https://chat-app-chatter.onrender.com",
     tech_stack: [
       {
         title: "React Js",
